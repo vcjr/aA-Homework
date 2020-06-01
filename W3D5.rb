@@ -67,7 +67,7 @@ end
 
 class Map
     def initialize
-        @map = []
+        @map = Array.new
     end
 
     def set(key, value)
