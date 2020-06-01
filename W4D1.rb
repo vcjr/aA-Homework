@@ -1,15 +1,18 @@
+require "set"
+
 class GraphNode
     attr_accessor :val, :neighbors
 
-    def initialize(val, neighbors)
-        @val = val
-        @neighbors = neighbors
+    def initialize(val)
+        self.val = val
+        self.neighbors = []
+    end
+
+    def add_neighbor(node)
+        self.neighbors << node
     end
 end
 
-a = GraphNode.new("a", ["b", "c", "e"])
-b = GraphNode.new("b", [])
-c = GraphNode.new("c", ["b", "d"])
-d = GraphNode.new("d", [])
-e = GraphNode.new("e", ["a"])
-f = GraphNode.new("f", ["e"])
+def bfs(starting_node, target_value)
+
+end
