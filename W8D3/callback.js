@@ -35,11 +35,32 @@ cat = {
 // console.log(cat.name);
 // console.log(cat.age);
 
-cat.purr();
+// cat.purr();
 
-// console.log(cat.age + 1);
-// Reassigning properties
-cat.age += 1
-cat.name = "Chilo"
-console.log(cat.age);
-console.log(cat.name);
+// // console.log(cat.age + 1);
+// // Reassigning properties
+// cat.age += 1
+// cat.name = "Chilo"
+// console.log(cat.age);
+// console.log(cat.name);
+
+// function logIfEven(num){
+//     if (num % 2 === 0 ) {
+//         console.log(`${num} this an even number...`)
+//     }
+// }
+
+// function myForEach(array, cb) {
+//     for (let i = 0; i < array.length; i++) {
+//         cb(array[i]);
+//     }
+// }
+
+
+// myForEach([1,2,3,4,5,6,7,8,9,10], logIfEven)
+
+[1,2,3,4,5,6,7,8,9,10].forEach(num => {
+    if (num % 2 === 0) {
+        console.log(`${num} this an even number...`)
+    }
+});
