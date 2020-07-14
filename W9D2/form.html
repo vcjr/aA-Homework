@@ -1,0 +1,29 @@
+<ul id="motorcycles"></ul>
+
+<form id="motorcycle-form">
+    <label for="brand-name">
+        Brand Name: 
+        <input type="text" name="motorcycle[brand]" id="brand-name">
+    </label>
+
+    <input type="submit" value="Add brand!">
+</form>
+
+<script>
+    const motorcycleForm = document.getElementById("motorcycle-form");
+
+    motorcycleForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const motorcycleInputEl = document.getElementById("brand-name");
+        const motorcycleName = motorcycleInputEl.value;
+        motorcycleInputEl.value = "";
+
+        const brandUlList = document.getElementById("motorcycles");
+
+        const li = document.createElement("li");
+        li.textContent = motorcycleName;
+
+        brandUlList.appendChild(li);
+    });
+</script>
